@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.List" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/purple_light</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="fontFamily">@font/roboto</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+
+</resources>

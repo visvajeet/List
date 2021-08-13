@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="item"
+            type="com.work.list.models.Items" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/card_color"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:text="@{item.name, default = `Name`}"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvMrp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/materialCardView"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/tvMrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mrp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+            app:layout_constraintStart_toStartOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="@{item.price, default = `Price`}"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMrp"
+            app:layout_constraintStart_toEndOf="@+id/tvMrp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="@{item.extra == null ? View.GONE : View.VISIBLE, default = gone }"
+            android:id="@+id/tvExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="@{item.extra, default = ``}"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMrp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMrp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMrp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

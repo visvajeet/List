@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_light">#E8ECF6</color>
+    <color name="green">#4D855B</color>
+    <color name="gray">#9F9F9F</color>
+
+
+    <color name="cream">#FBFBFB</color>
+    <color name="card_color">#EFEFEF</color>
+    <color name="cream_dark">#E4E4E4</color>
+    <color name="divider">#DDDDDD</color>
+
+    <color name="textColorPrimary">#1B1B1B</color>
+
+
+</resources>

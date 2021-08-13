@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">List</string>
+    <string name="one">One</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+    <string name="third">Third</string>
+    <string name="fourth">Fourth</string>
+    <string name="fifth">Fifth</string>
+    <string name="explore">Explore</string>
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+    <string name="mrp">MRP: </string>
+    <string name="coming_soon">Coming Soon…</string>
+    <string name="no_internet">No Internet connection</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/circle_icon"
+        android:id="@+id/fragmentFirst"
+        android:title="@string/first"/>
+
+    <item
+        android:icon="@drawable/circle_icon"
+        android:id="@+id/fragmentSecond"
+        android:title="@string/second"/>
+
+    <item
+        android:icon="@drawable/circle_icon"
+        android:id="@+id/fragmentThird"
+        android:title="@string/third"/>
+
+    <item
+        android:icon="@drawable/circle_icon"
+        android:id="@+id/fragmentFourth"
+        android:title="@string/fourth"/>
+
+    <item
+        android:icon="@drawable/circle_icon"
+        android:id="@+id/fragmentFifth"
+        android:title="@string/fifth"/>
+</menu
+>

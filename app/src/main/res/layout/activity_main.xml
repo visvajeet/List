@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            app:liftOnScroll="true"
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/layoutToolbar"
+                layout="@layout/layout_toolbar"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/navHostContainer"
+            android:layout_marginBottom="@dimen/_55sdp"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:fitsSystemWindows="true"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:orientation="vertical"
+           android:layout_gravity="bottom"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <View
+               android:background="@color/cream_dark"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"/>
+
+           <com.google.android.material.bottomnavigation.BottomNavigationView
+               app:menu="@menu/menu_bottom_nav"
+               android:background="@color/cream"
+               android:id="@+id/bottomNavMenu"
+               app:itemIconTint="@drawable/bottom_nav_icon_colors"
+               app:labelVisibilityMode="unlabeled"
+               app:itemIconSize="@dimen/_30sdp"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_55sdp"/>
+
+       </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</layout>
